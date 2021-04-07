@@ -2,7 +2,7 @@ import {
   iconsMap,
   itemGroupIconMap,
   getIconByGroup
-} from './icons-map';
+} from './icons-and-data-mappings';
 
 export {
   iconsMap,
