@@ -1,5 +1,11 @@
-import { iconsMap } from './icons-map';
+import {
+  iconsMap,
+  itemGroupIconMap,
+  getIconByGroup
+} from './icons-map';
 
 export {
-  iconsMap
+  iconsMap,
+  itemGroupIconMap,
+  getIconByGroup
 };
