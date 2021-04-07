@@ -1,0 +1,22 @@
+{
+  "name": "egeria-js-commons",
+  "version": "0.0.1",
+  "description": "Egeria JS Commons repository, abstract JS library",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odpi/egeria-js-commons.git"
+  },
+  "keywords": [
+    "js",
+    "egeria",
+    "commons"
+  ],
+  "author": "Contributors of the ODPi Egeria Project.",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/odpi/egeria-js-commons/issues"
+  },
+  "homepage": "https://github.com/odpi/egeria-js-commons#readme"
+}
