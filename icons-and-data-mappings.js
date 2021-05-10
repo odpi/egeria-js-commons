@@ -21,10 +21,12 @@ export const iconsMap = {
 
 export const linksTypeIconMap = {
   ReferencingCategory: {
-    icon: 'dashed-line'
+    icon: 'dashed-line',
+    strokeDashArray: '6,6'
   },
   ParentCategory: {
-    icon: 'custom-dashed-line'
+    icon: 'custom-dashed-line',
+    strokeDashArray: '20,10,5,5,5,10'
   }
 };
 
