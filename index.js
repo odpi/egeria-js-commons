@@ -1,11 +1,13 @@
 import {
   iconsMap,
   itemGroupIconMap,
-  getIconByGroup
+  getIconByGroup,
+  linksTypeIconMap
 } from './icons-and-data-mappings';
 
 export {
   iconsMap,
   itemGroupIconMap,
-  getIconByGroup
+  getIconByGroup,
+  linksTypeIconMap
 };
