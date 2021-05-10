@@ -1,6 +1,6 @@
 {
   "name": "egeria-js-commons",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Egeria JS Commons repository, abstract JS library",
   "main": "index.js",
   "scripts": {},
