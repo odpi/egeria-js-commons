@@ -130,6 +130,9 @@ export const itemGroupIconMap = {
   TransformationProject: {
     icon: 'file-icons-microsoft-project'
   },
+  Transformation_project: {
+    icon: 'file-icons-microsoft-project'
+  },
   View: {
     icon: 'view'
   }
