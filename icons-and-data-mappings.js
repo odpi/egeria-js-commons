@@ -135,6 +135,15 @@ export const itemGroupIconMap = {
   },
   View: {
     icon: 'view'
+  },
+  Dsjob: {
+    icon: 'whh-cog'
+  },
+  Stage: {
+    icon: 'whh-cog'
+  },
+  Stage_column: {
+    icon: 'carbon-column'
   }
 };
 
