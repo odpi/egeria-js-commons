@@ -26,11 +26,13 @@ export const iconsMap = {
 export const linksTypeIconMap = {
   ReferencingCategory: {
     icon: 'dashed-line',
-    strokeDashArray: '6,6'
+    strokeDashArray: '6,6',
+    label : 'Referencing Relationship'
   },
   PrimaryCategory: {
     icon: 'custom-dashed-line',
-    strokeDashArray: '0,0'
+    strokeDashArray: '0,0',
+    label : 'Primary Relationship'
   }
 };
 
