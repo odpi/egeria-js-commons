@@ -27,13 +27,14 @@ export const linksTypeIconMap = {
   ReferencingCategory: {
     icon: 'dashed-line',
     strokeDashArray: '6,6',
-    label : 'Referencing Relationship'
+    label : 'Referencing'
   },
   PrimaryCategory: {
     icon: 'custom-dashed-line',
     strokeDashArray: '0,0',
-    label : 'Primary Relationship'
-  }
+    label : 'Primary'
+  },
+  group : 'Relationship'
 };
 
 export const itemGroupIconMap = {
@@ -153,7 +154,8 @@ export const itemGroupIconMap = {
   },
   Stage_column: {
     icon: 'carbon-column'
-  }
+  },
+  group : 'Entity'
 };
 
 export const getIconByGroup = (groupName) => {
