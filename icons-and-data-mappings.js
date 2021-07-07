@@ -24,133 +24,177 @@ export const iconsMap = {
 };
 
 export const linksTypeIconMap = {
-  ReferencingCategory: {
-    icon: 'dashed-line',
-    strokeDashArray: '6,6'
-  },
   PrimaryCategory: {
     icon: 'custom-dashed-line',
-    strokeDashArray: '0,0'
+    strokeDashArray: '0,0',
+    label : 'Primary',
+    group : 'Relationship'
+  },
+  ReferencingCategory: {
+    icon: 'dashed-line',
+    strokeDashArray: '6,6',
+    label : 'Referencing',
+    group : 'Relationship'
   }
 };
 
 export const itemGroupIconMap = {
   AssetZoneMembership: {
-    icon: 'simple-square'
+    icon: 'simple-square',
+    group : 'Entity'
+
   },
   Category: {
-    icon: 'carbon-category'
+    icon: 'carbon-category',
+    group : 'Entity'
   },
   category: {
-    icon: 'carbon-category'
+    icon: 'carbon-category',
+    group : 'Entity'
   },
   Column: {
-    icon: 'simple-square'
+    icon: 'simple-square',
+    group : 'Entity'
   },
   condensedNode: {
-    icon: 'simple-square'
+    icon: 'simple-square',
+    group : 'Entity'
   },
   Connection: {
-    icon: 'mdi-transit-connection-variant'
+    icon: 'mdi-transit-connection-variant',
+    group : 'Entity'
   },
   Host: {
-    icon: 'mdi-transit-connection-variant'
+    icon: 'mdi-transit-connection-variant',
+    group : 'Entity'
   },
   Database: {
-    icon: 'dashicons-database'
+    icon: 'dashicons-database',
+    group : 'Entity'
   },
   DataFile: {
-    icon: 'bi-file-earmark'
+    icon: 'bi-file-earmark',
+    group : 'Entity'
   },
   Data_file: {
-    icon: 'bi-file-earmark'
+    icon: 'bi-file-earmark',
+    group : 'Entity'
   },
   Data_file_field: {
-    icon: 'data-file-field'
+    icon: 'data-file-field',
+    group : 'Entity'
   },
   Data_file_record: {
-    icon: 'data-file-record'
+    icon: 'data-file-record',
+    group : 'Entity'
   },
   CSVFile: {
-    icon: 'bi-file-earmark'
+    icon: 'bi-file-earmark',
+    group : 'Entity'
   },
   File: {
-    icon: 'bi-file-earmark'
+    icon: 'bi-file-earmark',
+    group : 'Entity'
   },
   Database_schema: {
-    icon: 'system-uicons-hierarchy'
+    icon: 'system-uicons-hierarchy',
+    group : 'Entity'
   },
   Database_column: {
-    icon: 'mdi-table-column'
+    icon: 'mdi-table-column',
+    group : 'Entity'
   },
   Database_table: {
-    icon: 'bi-table'
+    icon: 'bi-table',
+    group : 'Entity'
   },
   DisplayName: {
-    icon: 'simple-square'
+    icon: 'simple-square',
+    group : 'Entity'
   },
   Endpoint: {
-    icon: 'simple-square'
+    icon: 'simple-square',
+    group : 'Entity'
   },
   FileFolder: {
-    icon: 'bi-folder'
+    icon: 'bi-folder',
+    group : 'Entity'
   },
   Glossary: {
-    icon: 'carbon-data-structured'
+    icon: 'carbon-data-structured',
+    group : 'Entity'
   },
   GlossaryCategory: {
-    icon: 'carbon-category'
+    icon: 'carbon-category',
+    group : 'Entity'
   },
   GlossaryTerm: {
-    icon: 'ion-list-circle-outline'
+    icon: 'ion-list-circle-outline',
+    group : 'Entity'
   },
   Link: {
-    icon: 'link'
+    icon: 'link',
+    group : 'Entity'
   },
   Term: {
-    icon: 'ion-list-circle-outline'
+    icon: 'ion-list-circle-outline',
+    group : 'Entity'
   },
   Path: {
-    icon: 'file-icons-microsoft-infopath'
+    icon: 'file-icons-microsoft-infopath',
+    group : 'Entity'
   },
   Port: {
-    icon: 'link'
+    icon: 'link',
+    group : 'Entity'
   },
   Process: {
-    icon: 'whh-cog'
+    icon: 'whh-cog',
+    group : 'Entity'
   },
   RelationalColumn: {
-    icon: 'mdi-table-column'
+    icon: 'mdi-table-column',
+    group : 'Entity'
   },
   RelationalTable: {
-    icon: 'bi-table'
+    icon: 'bi-table',
+    group : 'Entity'
   },
   Schema: {
-    icon: 'system-uicons-hierarchy'
+    icon: 'system-uicons-hierarchy',
+    group : 'Entity'
   },
   subProcess: {
-    icon: 'mdi-cogs'
+    icon: 'mdi-cogs',
+    group : 'Entity'
   },
   TabularColumn: {
-    icon: 'carbon-column'
+    icon: 'carbon-column',
+    group : 'Entity'
   },
   TransformationProject: {
-    icon: 'file-icons-microsoft-project'
+    icon: 'file-icons-microsoft-project',
+    group : 'Entity'
   },
   Transformation_project: {
-    icon: 'file-icons-microsoft-project'
+    icon: 'file-icons-microsoft-project',
+    group : 'Entity'
   },
   View: {
-    icon: 'view'
+    icon: 'view',
+    group : 'Entity'
   },
   Dsjob: {
-    icon: 'whh-cog'
+    icon: 'whh-cog',
+    group : 'Entity'
   },
   Stage: {
-    icon: 'whh-cog'
+    icon: 'whh-cog',
+    group : 'Entity'
   },
   Stage_column: {
-    icon: 'carbon-column'
+    icon: 'carbon-column',
+    group: 'Entity'
   }
 };
 
