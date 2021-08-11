@@ -25,6 +25,7 @@ export const iconsMap = {
 };
 
 export const linksTypeIconMap = {
+
   PrimaryCategory: {
     icon: 'custom-dashed-line',
     strokeDashArray: '0,0',
