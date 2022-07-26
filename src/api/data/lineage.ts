@@ -1,9 +1,9 @@
 import {
   authHeader,
   handleResponse
-} from '../auth';
+} from '../../auth';
 
-import { apiUrl } from '.';
+import { apiUrl } from '../';
 
 function getLineageTypes() {
   const requestOptions: any = {method: 'GET', headers: authHeader()};

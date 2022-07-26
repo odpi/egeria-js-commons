@@ -1,9 +1,9 @@
-import { apiUrl } from '.';
+import { apiUrl } from '../';
 
 import {
   authHeader,
   handleResponse
-} from '../auth';
+} from '../../auth';
 
 export const glossaries = {
   getAll,

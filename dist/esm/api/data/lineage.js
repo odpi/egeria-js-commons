@@ -1,0 +1,22 @@
+import { authHeader, handleResponse } from '../../auth';
+import { apiUrl } from '../';
+function getLineageTypes() {
+    const requestOptions = { method: 'GET', headers: authHeader() };
+    return fetch(`${apiUrl()}/api/lineage/types`, requestOptions).then(handleResponse);
+}
+function getNameSuggestions(name, type) {
+    const requestOptions = { method: 'GET', headers: authHeader() };
+    let url = `${apiUrl()}/api/lineage/nodes`;
+    if (type) {
+        url = `${url}?type=${type.trim()}`;
+        if (name) {
+            url = `${url}&name=${name.trim()}`;
+        }
+        url = `${url}&limit=10`;
+    }
+    return fetch(url, requestOptions).then(handleResponse);
+}
+export const lineage = {
+    getLineageTypes,
+    getNameSuggestions
+};
