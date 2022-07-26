@@ -10,6 +10,19 @@ import {
 } from './navigation-types-mappings'
 
 import {
+  capitalize
+} from './capitalize';
+
+import {
+  apiUrl,
+  egeriaFetch,
+  glossaries,
+  goHome,
+  lineage,
+  types
+} from './api';
+
+import {
   authHeader,
   authHeaderWithContentType,
   currentJwt,
@@ -21,17 +34,24 @@ import {
 } from './auth';
 
 export {
+  apiUrl,
   authHeader,
   authHeaderWithContentType,
+  capitalize,
   currentJwt,
+  egeriaFetch,
   getIconByGroup,
+  glossaries,
+  goHome,
   handleResponse,
   iconsMap,
   itemGroupIconMap,
+  lineage,
   lineageViewsTypesMapping,
   linksTypeIconMap,
   login,
   logout,
   parseJwt,
-  setToken
+  setToken,
+  types
 };
