@@ -14,6 +14,10 @@ import {
 } from './capitalize';
 
 import {
+  getComponent
+} from './get-component';
+
+import {
   apiUrl,
   egeriaFetch,
   glossaries,
@@ -40,6 +44,7 @@ export {
   capitalize,
   currentJwt,
   egeriaFetch,
+  getComponent,
   getIconByGroup,
   glossaries,
   goHome,
