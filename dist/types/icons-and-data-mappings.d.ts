@@ -23,6 +23,13 @@ export declare const iconsMap: {
     'custom-dashed-line': string;
     'text-column': string;
 };
+export declare const menuIcons: {
+    assets: string;
+    glossary: string;
+    typeExplorer: string;
+    assetCatalog: string;
+    repositoryExplorer: string;
+};
 export declare const linksTypeIconMap: {
     PrimaryCategory: {
         icon: string;
