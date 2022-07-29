@@ -2,7 +2,8 @@ import {
   iconsMap,
   itemGroupIconMap,
   getIconByGroup,
-  linksTypeIconMap
+  linksTypeIconMap,
+  menuIcons
 } from './icons-and-data-mappings';
 
 import {
@@ -56,6 +57,7 @@ export {
   linksTypeIconMap,
   login,
   logout,
+  menuIcons,
   parseJwt,
   setToken,
   types
