@@ -3,7 +3,7 @@
 * If a type is missing from the map, it will have all the tabs displayed.
 * ultimate-destination, ultimate-source, end-to-end,vertical-lineage
 * */
-export const lineageViewsTypesMapping = {
+export const lineageViewsTypesMapping: any = {
     "GlossaryTerm" : ['vertical-lineage'],
     "Glossary" : ['vertical-lineage'],
     'GlossaryCategory' : ['vertical-lineage'],
