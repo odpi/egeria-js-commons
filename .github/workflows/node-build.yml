@@ -1,4 +1,4 @@
-name: test, build
+name: egeria-js-commons
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
     branches: [main]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -26,8 +25,6 @@ jobs:
           npm -v
       - name: Install Dependencies
         run: npm install
-      - name: Test
-        run: npm run test
       - name: Build
         run: npm run build
         env:
