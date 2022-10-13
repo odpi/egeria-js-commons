@@ -13,6 +13,14 @@ const egeriaFetch = (endpoint, method, headers, options) => {
     const apiUrl = process.env.REACT_APP_API_URL || '';
     return fetch(`${apiUrl}${endpoint}`, requestOptions).then(handleResponse);
 };
+/*
+ * @param uri is the full URL
+ * @param method usual fetch methods such as 'GET', 'POST', etc.
+ * @param callback this is an optional callback function that can be used
+ *                 in a different context to get the response and manage it
+ *                 in a custom manner
+ * @returns
+ */
 const fetchData = (uri, method, callback) => __awaiter(void 0, void 0, void 0, function* () {
     const res = yield egeriaFetch(uri, method, Object.assign({}, authHeader()), {});
     const data = yield res.json();

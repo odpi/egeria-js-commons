@@ -9,6 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { API_ASSETS_TYPES_PATH } from '../../routes';
 import { fetchData } from '../../egeria-fetch';
+/**
+ * @param apiUrl is an optional parameter but it is used if API is deployed
+ *               in a different location
+ *
+ * This function is used to fetch Asset Types.
+ *
+*/
 const fetchTypes = (apiUrl) => __awaiter(void 0, void 0, void 0, function* () {
     let typesData = yield fetchData(`${apiUrl || ''}${API_ASSETS_TYPES_PATH}`, 'GET');
     typesData = [
