@@ -1,4 +1,7 @@
-import { handleResponse } from '../auth';
+import {
+  handleResponse,
+  authHeader
+} from '../auth';
 
 const egeriaFetch = (endpoint: string, method : string, headers : any, options: any) => {
   const requestOptions: any = {
@@ -12,6 +15,18 @@ const egeriaFetch = (endpoint: string, method : string, headers : any, options: 
   return fetch(`${apiUrl}${endpoint}`, requestOptions).then(handleResponse);
 }
 
+const fetchData = async (uri: string, method: string, callback?: Function) => {
+  const res = await egeriaFetch(uri, method, {...authHeader()}, {});
+  const data = await res.json();
+
+  if(callback) {
+    callback(data);
+  } else {
+    return data;
+  }
+};
+
 export {
-  egeriaFetch
+  egeriaFetch,
+  fetchData
 };

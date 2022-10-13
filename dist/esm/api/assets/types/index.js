@@ -7,20 +7,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { handleResponse, authHeader } from '../auth';
-const egeriaFetch = (endpoint, method, headers, options) => {
-    const requestOptions = Object.assign({ method: method, headers: headers }, options);
-    const apiUrl = process.env.REACT_APP_API_URL || '';
-    return fetch(`${apiUrl}${endpoint}`, requestOptions).then(handleResponse);
-};
-const fetchData = (uri, method, callback) => __awaiter(void 0, void 0, void 0, function* () {
-    const res = yield egeriaFetch(uri, method, Object.assign({}, authHeader()), {});
-    const data = yield res.json();
-    if (callback) {
-        callback(data);
-    }
-    else {
-        return data;
-    }
+import { API_ASSETS_TYPES_PATH } from '../../routes';
+import { fetchData } from '../../egeria-fetch';
+const fetchTypes = (apiUrl) => __awaiter(void 0, void 0, void 0, function* () {
+    let typesData = yield fetchData(`${apiUrl || ''}${API_ASSETS_TYPES_PATH}`, 'GET');
+    typesData = [
+        ...typesData.map((d) => {
+            return {
+                value: d.name,
+                label: d.name
+            };
+        })
+    ];
+    return typesData;
 });
-export { egeriaFetch, fetchData };
+export { fetchTypes };

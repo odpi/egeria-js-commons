@@ -19,12 +19,17 @@ import {
 } from './get-component';
 
 import {
+  API_ASSETS_SEARCH_PATH,
+  API_ASSETS_TYPES_PATH,
   apiUrl,
   egeriaFetch,
+  fetchData,
+  fetchRawData,
+  fetchTypes,
   glossaries,
   goHome,
   lineage,
-  types
+  types,
 } from './api';
 
 import {
@@ -37,6 +42,19 @@ import {
   parseJwt,
   setToken
 } from './auth';
+
+import {
+  QUERY_MIN_LENGTH,
+  TYPES_MIN_SELECTED,
+  PAGE_SIZE_INCREASE_VALUE,
+  getQueryParams,
+  getQueryParamsPath,
+  ASSET_CATALOG_PATH
+} from './commons';
+
+import { formData } from './types/formData';
+
+export type { formData };
 
 export {
   apiUrl,
@@ -60,5 +78,12 @@ export {
   menuIcons,
   parseJwt,
   setToken,
-  types
+  types,
+
+  ASSET_CATALOG_PATH,
+  PAGE_SIZE_INCREASE_VALUE,
+  getQueryParams,
+  getQueryParamsPath,
+  fetchTypes,
+  fetchRawData
 };
