@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/odpi/egeria-js-commons#readme",
   "devDependencies": {
-    "@types/node": "^18.8.3",
+    "@types/node": "^18.11.0",
     "typescript": "^4.8.4"
   }
 }
