@@ -23,14 +23,13 @@ jobs:
           npm -v
       - name: Install Dependencies
         run: npm install
-      - name: Build
-        run: npm run build
         env:
           NODE_OPTIONS: "--max_old_space_size=6144"
-      - name: Commit files
+      - name: Build and commit files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          npm run build
           git commit -m "Update dist folder" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
