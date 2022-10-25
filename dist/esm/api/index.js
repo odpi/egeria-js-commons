@@ -7,9 +7,6 @@ import { API_ASSETS_SEARCH_PATH, API_ASSETS_TYPES_PATH } from './routes';
 const apiUrl = () => {
     return `${process.env.REACT_APP_API_URL}`;
 };
-const test = () => {
-    return 'test';
-};
 function goHome() {
     console.log('WENT HOME');
     window.location.href = '/';
