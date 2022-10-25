@@ -16,6 +16,10 @@ const apiUrl = () => {
   return `${process.env.REACT_APP_API_URL}`;
 }
 
+const test = () => {
+  return 'test';
+};
+
 function goHome() {
   console.log('WENT HOME');
 
