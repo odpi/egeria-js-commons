@@ -1,5 +1,5 @@
 {
-  "name": "egeria-js-commons",
+  "name": "@lfai/egeria-js-commons",
   "version": "4.0.1",
   "description": "Egeria JS Commons repository, abstract JS library",
   "files": [
