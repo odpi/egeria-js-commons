@@ -1,3 +1,3 @@
 # egeria-js-commons
 
-This is an abstract JS repository used to store common Javascript data and custom functions used through the Egeria User Interfaces.
+Common module for storing static data such as key value objects, SVGs, icon mappings, API urls.
