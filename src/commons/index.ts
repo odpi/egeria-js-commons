@@ -9,7 +9,10 @@ import {
   getQueryParamsPath
 } from './helpers';
 
-import { ASSET_CATALOG_PATH } from './paths';
+import {
+  ASSET_CATALOG_PATH,
+  LOGIN_PATH
+} from './paths';
 
 export {
   QUERY_MIN_LENGTH,
@@ -19,6 +22,7 @@ export {
   getQueryParams,
   getQueryParamsPath,
 
-  ASSET_CATALOG_PATH
+  ASSET_CATALOG_PATH,
+  LOGIN_PATH
 }
 
