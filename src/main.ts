@@ -49,7 +49,8 @@ import {
   PAGE_SIZE_INCREASE_VALUE,
   getQueryParams,
   getQueryParamsPath,
-  ASSET_CATALOG_PATH
+  ASSET_CATALOG_PATH,
+  LOGIN_PATH
 } from './commons';
 
 import { formData } from './types/formData';
@@ -81,6 +82,7 @@ export {
   types,
 
   ASSET_CATALOG_PATH,
+  LOGIN_PATH,
   PAGE_SIZE_INCREASE_VALUE,
   getQueryParams,
   getQueryParamsPath,

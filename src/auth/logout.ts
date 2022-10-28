@@ -1,3 +1,5 @@
+import { LOGIN_PATH } from 'src/commons';
+
 export const logout = (logoutCallback?: Function) => {
   localStorage.removeItem('currentJwt');
 
@@ -5,5 +7,7 @@ export const logout = (logoutCallback?: Function) => {
 
   if (logoutCallback) {
     logoutCallback();
+  } else {
+    window.location.href = LOGIN_PATH;
   }
 }
