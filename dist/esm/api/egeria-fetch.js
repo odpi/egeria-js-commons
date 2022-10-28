@@ -8,10 +8,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { handleResponse, authHeader } from '../auth';
+import { REQUEST_TIMEOUT } from '../commons/constants';
 const egeriaFetch = (endpoint, method, headers, options) => {
-    const requestOptions = Object.assign({ method: method, headers: headers }, options);
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
+    const requestOptions = Object.assign({ method: method, headers: headers, signal: controller.signal }, options);
     const apiUrl = process.env.REACT_APP_API_URL || '';
-    return fetch(`${apiUrl}${endpoint}`, requestOptions).then(handleResponse);
+    return fetch(`${apiUrl}${endpoint}`, requestOptions).then((response) => {
+        clearTimeout(timeoutId);
+        return handleResponse(response);
+    });
 };
 /*
  * @param uri is the full URL
