@@ -1,4 +1,4 @@
-import { LOGIN_PATH } from 'src/commons';
+import { LOGIN_PATH } from '../commons';
 export const logout = (logoutCallback) => {
     localStorage.removeItem('currentJwt');
     console.log('LOGGED OUT');
