@@ -18,14 +18,14 @@ import { fetchData } from '../../egeria-fetch';
 */
 const fetchTypes = (apiUrl) => __awaiter(void 0, void 0, void 0, function* () {
     let typesData = yield fetchData(`${apiUrl || ''}${API_ASSETS_TYPES_PATH}`, 'GET');
-    typesData = [
+    typesData = typesData ? [
         ...typesData.map((d) => {
             return {
                 value: d.name,
                 label: d.name
             };
         })
-    ];
+    ] : [];
     return typesData;
 });
 export { fetchTypes };

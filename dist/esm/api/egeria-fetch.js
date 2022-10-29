@@ -17,6 +17,8 @@ const egeriaFetch = (endpoint, method, headers, options) => {
     return fetch(`${apiUrl}${endpoint}`, requestOptions).then((response) => {
         clearTimeout(timeoutId);
         return handleResponse(response);
+    }).catch((error) => {
+        console.error(`Err: ${error}`);
     });
 };
 /*
@@ -29,7 +31,7 @@ const egeriaFetch = (endpoint, method, headers, options) => {
  */
 const fetchData = (uri, method, callback) => __awaiter(void 0, void 0, void 0, function* () {
     const res = yield egeriaFetch(uri, method, Object.assign({}, authHeader()), {});
-    const data = yield res.json();
+    const data = (yield res) ? res.json() : null;
     if (callback) {
         callback(data);
     }

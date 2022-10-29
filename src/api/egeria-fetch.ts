@@ -23,6 +23,8 @@ const egeriaFetch = (endpoint: string, method : string, headers : any, options: 
     clearTimeout(timeoutId);
 
     return handleResponse(response);
+  }).catch((error: any) => {
+    console.error(`Err: ${error}`);
   });
 }
 
@@ -36,7 +38,7 @@ const egeriaFetch = (endpoint: string, method : string, headers : any, options: 
  */
 const fetchData = async (uri: string, method: string, callback?: Function) => {
   const res = await egeriaFetch(uri, method, {...authHeader()}, {});
-  const data = await res.json();
+  const data = await res ? res.json() : null;
 
   if(callback) {
     callback(data);
