@@ -2,6 +2,7 @@ import { glossaries } from './data/glossaries';
 import { lineage } from './data/lineage';
 import { types } from './data/types';
 import { egeriaFetch, fetchData } from './egeria-fetch';
+import { API_URL } from '../commons/constants';
 import {
   fetchRawData,
   fetchTypes
@@ -13,7 +14,7 @@ import {
 } from './routes';
 
 const apiUrl = () => {
-  return `${process.env.REACT_APP_API_URL}`;
+  return `${API_URL}`;
 }
 
 function goHome() {

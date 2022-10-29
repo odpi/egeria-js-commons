@@ -1,4 +1,4 @@
-import { apiUrl } from '../';
+import { API_URL } from '../../commons/constants';
 import { authHeader, handleResponse } from '../../auth';
 export const glossaries = {
     getAll,
@@ -18,7 +18,7 @@ export const glossaries = {
  */
 function getAll() {
     const requestOptions = { method: 'GET', headers: authHeader() };
-    return fetch(`${apiUrl()}/api/glossaries`, requestOptions).then(handleResponse);
+    return fetch(`${API_URL}/api/glossaries`, requestOptions).then(handleResponse);
 }
 /**
  *
@@ -33,7 +33,7 @@ function getAll() {
  */
 function getGlossaryCategories() {
     const requestOptions = { method: 'GET', headers: authHeader() };
-    return fetch(`${apiUrl()}/api/glossaries/categories`, requestOptions).then(handleResponse);
+    return fetch(`${API_URL}/api/glossaries/categories`, requestOptions).then(handleResponse);
 }
 /**
  *
@@ -48,5 +48,5 @@ function getGlossaryCategories() {
  */
 function getGlossaryTerms() {
     const requestOptions = { method: 'GET', headers: authHeader() };
-    return fetch(`${apiUrl()}/api/glossaries/terms`, requestOptions).then(handleResponse);
+    return fetch(`${API_URL}/api/glossaries/terms`, requestOptions).then(handleResponse);
 }

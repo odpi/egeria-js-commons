@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { API_ASSETS_TYPES_PATH } from '../../routes';
 import { fetchData } from '../../egeria-fetch';
+import { API_URL } from '../../../commons/constants';
 /**
  * @param apiUrl is an optional parameter but it is used if API is deployed
  *               in a different location
@@ -17,7 +18,7 @@ import { fetchData } from '../../egeria-fetch';
  *
 */
 const fetchTypes = (apiUrl) => __awaiter(void 0, void 0, void 0, function* () {
-    let typesData = yield fetchData(`${apiUrl || ''}${API_ASSETS_TYPES_PATH}`, 'GET');
+    let typesData = yield fetchData(`${apiUrl ? apiUrl : API_URL}${API_ASSETS_TYPES_PATH}`, 'GET');
     typesData = typesData ? [
         ...typesData.map((d) => {
             return {

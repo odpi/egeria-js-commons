@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { API_ASSETS_SEARCH_PATH } from '../../routes';
-import { QUERY_MIN_LENGTH, TYPES_MIN_SELECTED } from '../../../commons/constants';
+import { QUERY_MIN_LENGTH, TYPES_MIN_SELECTED, API_URL } from '../../../commons/constants';
 import { fetchData } from '../../egeria-fetch';
 import { getQueryParamsPath } from '../../../commons/helpers';
 /**
@@ -26,7 +26,7 @@ const fetchRawData = (formData, apiUrl) => __awaiter(void 0, void 0, void 0, fun
     const { q, types } = formData;
     if (q.length >= QUERY_MIN_LENGTH && types.length >= TYPES_MIN_SELECTED) {
         const _queryParams = getQueryParamsPath(formData);
-        const path = `${apiUrl || ''}${API_ASSETS_SEARCH_PATH}${_queryParams.length ? `?${_queryParams.join('&')}` : ``}`;
+        const path = `${apiUrl ? apiUrl : API_URL}${API_ASSETS_SEARCH_PATH}${_queryParams.length ? `?${_queryParams.join('&')}` : ``}`;
         const rawData = yield fetchData(path, 'GET');
         return rawData;
     }
