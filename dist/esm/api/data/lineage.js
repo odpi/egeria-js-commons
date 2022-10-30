@@ -1,12 +1,12 @@
 import { authHeader, handleResponse } from '../../auth';
-import { apiUrl } from '../';
+import { API_URL } from '../../commons/constants';
 function getLineageTypes() {
     const requestOptions = { method: 'GET', headers: authHeader() };
-    return fetch(`${apiUrl()}/api/lineage/types`, requestOptions).then(handleResponse);
+    return fetch(`${API_URL}/api/lineage/types`, requestOptions).then(handleResponse);
 }
 function getNameSuggestions(name, type) {
     const requestOptions = { method: 'GET', headers: authHeader() };
-    let url = `${apiUrl()}/api/lineage/nodes`;
+    let url = `${API_URL}/api/lineage/nodes`;
     if (type) {
         url = `${url}?type=${type.trim()}`;
         if (name) {

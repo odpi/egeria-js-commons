@@ -1,4 +1,4 @@
-import { apiUrl } from '../';
+import { API_URL } from '../../commons/constants';
 import { authHeader, handleResponse } from '../../auth';
 export const types = {
     getAll
@@ -16,5 +16,5 @@ export const types = {
  */
 function getAll() {
     const requestOptions = { method: 'GET', headers: authHeader() };
-    return fetch(`${apiUrl()}/api/assets/types`, requestOptions).then(handleResponse);
+    return fetch(`${API_URL}/api/assets/types`, requestOptions).then(handleResponse);
 }

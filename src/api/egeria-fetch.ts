@@ -3,9 +3,9 @@ import {
   authHeader
 } from '../auth';
 
-import { REQUEST_TIMEOUT } from '../commons/constants';
+import { API_URL, REQUEST_TIMEOUT } from '../commons/constants';
 
-const egeriaFetch = (endpoint: string, method : string, headers : any, options: any) => {
+const egeriaFetch = (uri: string, method : string, headers : any, options: any) => {
   const controller = new AbortController();
 
   const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
@@ -17,12 +17,12 @@ const egeriaFetch = (endpoint: string, method : string, headers : any, options: 
     ...options
   };
 
-  const apiUrl = process.env.REACT_APP_API_URL || '';
-
-  return fetch(`${apiUrl}${endpoint}`, requestOptions).then((response: any) => {
+  return fetch(`${API_URL}${uri}`, requestOptions).then((response: any) => {
     clearTimeout(timeoutId);
 
     return handleResponse(response);
+  }).catch((error: any) => {
+    console.error(`Err: ${error}`);
   });
 }
 
@@ -36,7 +36,7 @@ const egeriaFetch = (endpoint: string, method : string, headers : any, options: 
  */
 const fetchData = async (uri: string, method: string, callback?: Function) => {
   const res = await egeriaFetch(uri, method, {...authHeader()}, {});
-  const data = await res.json();
+  const data = await res ? res.json() : null;
 
   if(callback) {
     callback(data);

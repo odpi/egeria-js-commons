@@ -5,5 +5,5 @@
  * This function is used to fetch Asset Types.
  *
 */
-declare const fetchTypes: (apiUrl?: string) => Promise<any>;
+declare const fetchTypes: () => Promise<any>;
 export { fetchTypes };

@@ -26,11 +26,12 @@ const fetchRawData = (formData, apiUrl) => __awaiter(void 0, void 0, void 0, fun
     const { q, types } = formData;
     if (q.length >= QUERY_MIN_LENGTH && types.length >= TYPES_MIN_SELECTED) {
         const _queryParams = getQueryParamsPath(formData);
-        const path = `${apiUrl || ''}${API_ASSETS_SEARCH_PATH}${_queryParams.length ? `?${_queryParams.join('&')}` : ``}`;
+        const path = `${API_ASSETS_SEARCH_PATH}${_queryParams.length ? `?${_queryParams.join('&')}` : ``}`;
         const rawData = yield fetchData(path, 'GET');
         return rawData;
     }
     else {
+        console.error('Err: API conditions were not met.');
         return [];
     }
 });

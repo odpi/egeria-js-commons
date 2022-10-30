@@ -8,15 +8,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { handleResponse, authHeader } from '../auth';
-import { REQUEST_TIMEOUT } from '../commons/constants';
-const egeriaFetch = (endpoint, method, headers, options) => {
+import { API_URL, REQUEST_TIMEOUT } from '../commons/constants';
+const egeriaFetch = (uri, method, headers, options) => {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
     const requestOptions = Object.assign({ method: method, headers: headers, signal: controller.signal }, options);
-    const apiUrl = process.env.REACT_APP_API_URL || '';
-    return fetch(`${apiUrl}${endpoint}`, requestOptions).then((response) => {
+    return fetch(`${API_URL}${uri}`, requestOptions).then((response) => {
         clearTimeout(timeoutId);
         return handleResponse(response);
+    }).catch((error) => {
+        console.error(`Err: ${error}`);
     });
 };
 /*
@@ -29,7 +30,7 @@ const egeriaFetch = (endpoint, method, headers, options) => {
  */
 const fetchData = (uri, method, callback) => __awaiter(void 0, void 0, void 0, function* () {
     const res = yield egeriaFetch(uri, method, Object.assign({}, authHeader()), {});
-    const data = yield res.json();
+    const data = (yield res) ? res.json() : null;
     if (callback) {
         callback(data);
     }
