@@ -49,6 +49,7 @@ import {
   PAGE_SIZE_INCREASE_VALUE,
   getQueryParams,
   getQueryParamsPath,
+  ABOUT_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH
 } from './commons';
@@ -81,6 +82,7 @@ export {
   setToken,
   types,
 
+  ABOUT_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH,
   PAGE_SIZE_INCREASE_VALUE,

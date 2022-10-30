@@ -10,6 +10,7 @@ import {
 } from './helpers';
 
 import {
+  ABOUT_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH
 } from './paths';
@@ -22,6 +23,7 @@ export {
   getQueryParams,
   getQueryParamsPath,
 
+  ABOUT_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH
 }
