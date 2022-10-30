@@ -1,1 +1,1 @@
-export declare function login(username: string, password: string, apiUrl?: string): Promise<Response>;
+export declare function login(username: string, password: string): Promise<Response>;

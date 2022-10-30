@@ -21,12 +21,14 @@ const fetchRawData = async (formData: formData, apiUrl?: string) => {
   if(q.length >= QUERY_MIN_LENGTH && types.length >= TYPES_MIN_SELECTED) {
     const _queryParams = getQueryParamsPath(formData);
 
-    const path = `${apiUrl ? apiUrl : API_URL}${API_ASSETS_SEARCH_PATH}${_queryParams.length ? `?${_queryParams.join('&')}` : ``}`;
+    const path = `${API_ASSETS_SEARCH_PATH}${_queryParams.length ? `?${_queryParams.join('&')}` : ``}`;
 
     const rawData = await fetchData(path, 'GET');
 
     return rawData;
   } else {
+    console.error('Err: API conditions were not met.');
+
     return [];
   }
 };

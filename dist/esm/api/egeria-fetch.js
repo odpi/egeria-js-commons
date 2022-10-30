@@ -8,12 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { handleResponse, authHeader } from '../auth';
-import { REQUEST_TIMEOUT } from '../commons/constants';
+import { API_URL, REQUEST_TIMEOUT } from '../commons/constants';
 const egeriaFetch = (uri, method, headers, options) => {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
     const requestOptions = Object.assign({ method: method, headers: headers, signal: controller.signal }, options);
-    return fetch(`${uri}`, requestOptions).then((response) => {
+    return fetch(`${API_URL}${uri}`, requestOptions).then((response) => {
         clearTimeout(timeoutId);
         return handleResponse(response);
     }).catch((error) => {

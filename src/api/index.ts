@@ -10,7 +10,8 @@ import {
 
 import {
   API_ASSETS_SEARCH_PATH,
-  API_ASSETS_TYPES_PATH
+  API_ASSETS_TYPES_PATH,
+  API_LOGIN_PATH
 } from './routes';
 
 const apiUrl = () => {
@@ -26,6 +27,7 @@ function goHome() {
 export {
   API_ASSETS_SEARCH_PATH,
   API_ASSETS_TYPES_PATH,
+  API_LOGIN_PATH,
   apiUrl,
   egeriaFetch,
   fetchData,

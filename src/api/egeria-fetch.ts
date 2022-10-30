@@ -3,7 +3,7 @@ import {
   authHeader
 } from '../auth';
 
-import { REQUEST_TIMEOUT } from '../commons/constants';
+import { API_URL, REQUEST_TIMEOUT } from '../commons/constants';
 
 const egeriaFetch = (uri: string, method : string, headers : any, options: any) => {
   const controller = new AbortController();
@@ -17,7 +17,7 @@ const egeriaFetch = (uri: string, method : string, headers : any, options: any) 
     ...options
   };
 
-  return fetch(`${uri}`, requestOptions).then((response: any) => {
+  return fetch(`${API_URL}${uri}`, requestOptions).then((response: any) => {
     clearTimeout(timeoutId);
 
     return handleResponse(response);
