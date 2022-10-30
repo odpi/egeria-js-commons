@@ -82,6 +82,9 @@ export {
   setToken,
   types,
 
+  API_ASSETS_SEARCH_PATH,
+  API_ASSETS_TYPES_PATH,
+
   ABOUT_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH,
