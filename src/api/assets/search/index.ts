@@ -15,6 +15,7 @@ import { getQueryParamsPath } from '../../../commons/helpers';
  * This function is used to fetch data for Asset Catalog.
  *
  */
+// TODO: remove apiUrl as an optional
 const fetchRawData = async (formData: formData, apiUrl?: string) => {
   const {q, types} = formData;
 
