@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: 16.13.0
           registry-url: 'https://registry.npmjs.org'
+          scope: '@lfai'
       - name: Install dependencies
         if: steps.check.outputs.changed == 'true'
         run: npm install
