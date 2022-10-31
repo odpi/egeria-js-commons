@@ -1,4 +1,4 @@
-name: egeria-ui-components publish
+name: egeria-js-commons publish
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: github.repository == 'odpi/egeria-ui-components'
+    if: github.repository == 'odpi/egeria-js-commons'
     steps:
       - name: Checkout source
         uses: actions/checkout@v3.1.0
