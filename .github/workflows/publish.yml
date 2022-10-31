@@ -1,4 +1,4 @@
-name: egeria-js-commons publish
+name: egeria-ui-components publish
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: github.repository == 'odpi/egeria-js-commons'
+    if: github.repository == 'odpi/egeria-ui-components'
     steps:
       - name: Checkout source
         uses: actions/checkout@v3.1.0
@@ -31,8 +31,6 @@ jobs:
         run: npm run build
       - name: Publish package to NPM
         if: steps.check.outputs.changed == 'true'
-        run: |
-          npm ci
-          npm publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
