@@ -51,7 +51,9 @@ import {
   getQueryParamsPath,
   ABOUT_PATH,
   ASSET_CATALOG_PATH,
-  LOGIN_PATH
+  LOGIN_PATH,
+  isStringLonger,
+  isArrayEmpty
 } from './commons';
 
 import { formData } from './types/formData';
@@ -84,7 +86,7 @@ export {
 
   API_ASSETS_SEARCH_PATH,
   API_ASSETS_TYPES_PATH,
-
+  QUERY_MIN_LENGTH,
   ABOUT_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH,
@@ -92,5 +94,7 @@ export {
   getQueryParams,
   getQueryParamsPath,
   fetchTypes,
-  fetchRawData
+  fetchRawData,
+  isStringLonger,
+  isArrayEmpty
 };
