@@ -7,10 +7,8 @@ export {isStringLonger, isArrayEmpty};
  *
  */
 const isStringLonger = (query: string, minLength: number) => {
-    if (query.length < minLength) {
-        return false;
-    }
-    return true;
+    return query.length >= minLength;
+
 }
 /**
  * @param array the array to check
@@ -18,8 +16,6 @@ const isStringLonger = (query: string, minLength: number) => {
  *
  */
 const isArrayEmpty = (array: Array<string>) => {
-    if (!array || array.length === 0) {
-        return true;
-    }
-    return false;
+    return !array || array.length === 0;
+
 };
