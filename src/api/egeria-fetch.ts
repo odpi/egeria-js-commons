@@ -22,7 +22,7 @@ const egeriaFetch = (uri: string, method : string, headers : any, options: any) 
 
     return handleResponse(response);
   }).catch((error: any) => {
-    console.error(`Err: ${error}`);
+    console.error(`Error:`, error);
   });
 }
 

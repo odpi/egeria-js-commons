@@ -6,7 +6,13 @@ export function handleResponse(response: any) {
       logout();
     }
 
-    return Promise.reject();
+    if ([500, 501, 502, 503, 504].indexOf(response.status) !== -1) {
+      const event = new CustomEvent('EGERIA_API_ERROR', { 'detail': response });
+
+      document.dispatchEvent(event);
+    }
+
+    return Promise.reject(response);
   }
 
   return response;
