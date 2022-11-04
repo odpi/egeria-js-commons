@@ -10,12 +10,12 @@ interface formData {
   q: {
       value: string,
       isValid: boolean,
-      Pristine: boolean
+      isPristine: boolean
   },
   types: {
       value: Array<string>,
       isValid: boolean,
-      Pristine: boolean
+      isPristine: boolean
   }
 }
 
