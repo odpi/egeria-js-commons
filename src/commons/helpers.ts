@@ -12,12 +12,12 @@ const getQueryParamsPath = (formData: formData) => {
 
   let queryParams = [] as any;
 
-  if(q) {
-    queryParams.push(`q=${q}`);
+  if(q.value) {
+    queryParams.push(`q=${q.value}`);
   }
 
-  if(types && types.length > 0) {
-    queryParams.push(`types=${types.join(',')}`);
+  if(types && types.value.length > 0) {
+    queryParams.push(`types=${types.value.join(',')}`);
   }
 
   queryParams.push(`exactMatch=${exactMatch}`);

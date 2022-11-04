@@ -19,7 +19,7 @@ import { getQueryParamsPath } from '../../../commons/helpers';
 const fetchRawData = async (formData: formData, apiUrl?: string) => {
   const {q, types} = formData;
 
-  if(q.length >= QUERY_MIN_LENGTH && types.length >= TYPES_MIN_SELECTED) {
+  if(q.value.length >= QUERY_MIN_LENGTH && types.value.length >= TYPES_MIN_SELECTED) {
     const _queryParams = getQueryParamsPath(formData);
 
     const path = `${API_ASSETS_SEARCH_PATH}${_queryParams.length ? `?${_queryParams.join('&')}` : ``}`;
