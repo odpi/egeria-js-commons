@@ -7,8 +7,16 @@ interface formData {
   caseSensitive: boolean,
   exactMatch: boolean,
   pageSize: number,
-  q: string,
-  types: Array<string>
+  q: {
+      value: string,
+      isValid: boolean,
+      Pristine: boolean
+  },
+  types: {
+      value: Array<string>,
+      isValid: boolean,
+      Pristine: boolean
+  }
 }
 
 export type {
