@@ -47,16 +47,22 @@ import {
   QUERY_MIN_LENGTH,
   TYPES_MIN_SELECTED,
   PAGE_SIZE_INCREASE_VALUE,
-  getQueryParams,
-  getQueryParamsPath,
   ABOUT_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH,
-  isStringLonger,
-  isArrayEmpty
 } from './commons';
 
 import { formData } from './types/formData';
+
+import {
+  formIsValid,
+  getQueryParams,
+  getQueryParamsPath,
+  validateQueryAndTypes,
+
+  isArrayEmpty,
+  isStringLonger
+} from './forms';
 
 export type { formData };
 
@@ -84,17 +90,26 @@ export {
   setToken,
   types,
 
+  ABOUT_PATH,
   API_ASSETS_SEARCH_PATH,
   API_ASSETS_TYPES_PATH,
-  QUERY_MIN_LENGTH,
-  ABOUT_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH,
+
   PAGE_SIZE_INCREASE_VALUE,
-  getQueryParams,
-  getQueryParamsPath,
+  QUERY_MIN_LENGTH,
+  TYPES_MIN_SELECTED,
+
   fetchTypes,
   fetchRawData,
-  isStringLonger,
-  isArrayEmpty
+
+  /* AssetCatalog */
+  formIsValid,
+  getQueryParams,
+  getQueryParamsPath,
+  validateQueryAndTypes,
+
+  /* Validators */
+  isArrayEmpty,
+  isStringLonger
 };

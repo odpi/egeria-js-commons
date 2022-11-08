@@ -2,7 +2,7 @@ import { API_ASSETS_SEARCH_PATH } from '../../routes';
 import { QUERY_MIN_LENGTH, TYPES_MIN_SELECTED, API_URL } from '../../../commons/constants';
 import { formData } from '../../../types/formData';
 import { fetchData } from '../../egeria-fetch';
-import { getQueryParamsPath } from '../../../commons/helpers';
+import { getQueryParamsPath } from '../../../forms/index';
 
 /**
  *
@@ -16,13 +16,13 @@ import { getQueryParamsPath } from '../../../commons/helpers';
  *
  */
 // TODO: remove apiUrl as an optional
-const fetchRawData = async (formData: formData, apiUrl?: string) => {
+const fetchRawData = async (formData: formData) => {
   const {q, types} = formData;
 
   if(q.value.length >= QUERY_MIN_LENGTH && types.value.length >= TYPES_MIN_SELECTED) {
-    const _queryParams = getQueryParamsPath(formData);
+    const _queryParamsPath = getQueryParamsPath(formData);
 
-    const path = `${API_ASSETS_SEARCH_PATH}${_queryParams.length ? `?${_queryParams.join('&')}` : ``}`;
+    const path = `${API_ASSETS_SEARCH_PATH}${_queryParamsPath.length ? `?${_queryParamsPath}` : ``}`;
 
     const rawData = await fetchData(path, 'GET');
 
