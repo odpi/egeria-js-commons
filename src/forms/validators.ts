@@ -1,5 +1,3 @@
-export {isStringLonger, isArrayEmpty};
-
 /**
  * @param query the string to check length
  * @param minLength the length to check
@@ -17,5 +15,9 @@ const isStringLonger = (query: string, minLength: number) => {
  */
 const isArrayEmpty = (array: Array<string>) => {
     return !array || array.length === 0;
+};
 
+export {
+  isArrayEmpty,
+  isStringLonger
 };

@@ -4,15 +4,15 @@
  * It's describing the attributes types used.
  */
 interface formData {
-  caseSensitive: boolean,
-  exactMatch: boolean,
-  pageSize: number,
-  q: {
+  caseSensitive?: boolean,
+  exactMatch?: boolean,
+  pageSize?: number,
+  q?: {
       value: string,
       isValid: boolean,
       isPristine: boolean
   },
-  types: {
+  types?: {
       value: Array<string>,
       isValid: boolean,
       isPristine: boolean
