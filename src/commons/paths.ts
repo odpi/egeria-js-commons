@@ -10,3 +10,9 @@ export {
   ASSET_CATALOG_PATH,
   LOGIN_PATH
 }
+
+export function getAssetLineagePrintUri(guid: any, lineageType: any) {
+  const printUri = `/asset-lineage/${ guid }/${ lineageType }/print`;
+
+  return printUri;
+}
