@@ -17,4 +17,3 @@ export {
   LOGIN_PATH,
   getAssetLineagePrintUri
 }
-
