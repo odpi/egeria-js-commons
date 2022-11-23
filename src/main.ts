@@ -50,6 +50,7 @@ import {
   ABOUT_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH,
+  getAssetLineagePrintUri
 } from './commons';
 
 import { formData } from './types/formData';
@@ -95,6 +96,7 @@ export {
   API_ASSETS_TYPES_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH,
+  getAssetLineagePrintUri,
 
   PAGE_SIZE_INCREASE_VALUE,
   QUERY_MIN_LENGTH,
