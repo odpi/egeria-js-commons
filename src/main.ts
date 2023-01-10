@@ -19,6 +19,10 @@ import {
 } from './get-component';
 
 import {
+  getFormattedDate
+} from './get-formatted-date';
+
+import {
   API_ASSETS_SEARCH_PATH,
   API_ASSETS_TYPES_PATH,
   apiUrl,
@@ -44,12 +48,14 @@ import {
 } from './auth';
 
 import {
-  QUERY_MIN_LENGTH,
-  TYPES_MIN_SELECTED,
-  PAGE_SIZE_INCREASE_VALUE,
   ABOUT_PATH,
   ASSET_CATALOG_PATH,
+  LINEAGE_TYPES,
   LOGIN_PATH,
+  PAGE_SIZE_INCREASE_VALUE,
+  QUERY_MIN_LENGTH,
+  TYPES_MIN_SELECTED,
+  getAssetLineagePrintPath
 } from './commons';
 
 import { formData } from './types/formData';
@@ -74,6 +80,7 @@ export {
   currentJwt,
   egeriaFetch,
   getComponent,
+  getFormattedDate,
   getIconByGroup,
   glossaries,
   goHome,
@@ -95,6 +102,8 @@ export {
   API_ASSETS_TYPES_PATH,
   ASSET_CATALOG_PATH,
   LOGIN_PATH,
+  LINEAGE_TYPES,
+  getAssetLineagePrintPath,
 
   PAGE_SIZE_INCREASE_VALUE,
   QUERY_MIN_LENGTH,
