@@ -39,10 +39,10 @@ function getAll() {
  * @return {Promise} Returns a promise with the request.
  *
  */
-function getGlossaryCategories() {
+function getGlossaryCategories(glossaryGUID) {
   const requestOptions: any = { method: 'GET', headers: authHeader() };
 
-  return fetch(`${API_URL}/api/glossaries/categories`, requestOptions).then(handleResponse);
+  return fetch(`${API_URL}/api/glossaries/${glossaryGUID}/categories`, requestOptions).then(handleResponse);
 }
 
 /**
@@ -56,8 +56,8 @@ function getGlossaryCategories() {
  * @return {Promise} Returns a promise with the request.
  *
  */
- function getGlossaryTerms() {
+ function getGlossaryTerms(categoryGUID) {
   const requestOptions: any = { method: 'GET', headers: authHeader() };
 
-  return fetch(`${API_URL}/api/glossaries/terms`, requestOptions).then(handleResponse);
+  return fetch(`${API_URL}/api/glossaries/categories/${categoryGUID}/terms`, requestOptions).then(handleResponse);
 }
