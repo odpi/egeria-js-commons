@@ -8,7 +8,12 @@ import { API_URL, REQUEST_TIMEOUT } from '../commons/constants';
 const egeriaFetch = (uri: string, method : string, headers : any, options: any) => {
   const controller = new AbortController();
 
-  const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT);
+  const timeoutId = setTimeout(() => {
+    controller.abort();
+
+    const event = new CustomEvent('EGERIA_API_ERROR', { 'detail': {'message': 'Request timed out.'} });
+    document.dispatchEvent(event);
+  }, REQUEST_TIMEOUT);
 
   const requestOptions: any = {
     method: method,
