@@ -5,11 +5,21 @@ import { REQUEST_TIMEOUT } from '../commons/constants';
 jest.setTimeout(REQUEST_TIMEOUT + 10000);
 
 const abortFn = jest.fn();
+const throwError = jest.fn();
 
 // @ts-ignore
 global.AbortController = jest.fn(() => ({
   abort: abortFn,
 }));
+
+// @ts-ignore
+global.CustomEvent = jest.fn();
+
+// @ts-ignore
+global.document = {
+  // @ts-ignore
+  dispatchEvent: throwError
+};
 
 describe('test', () => {
   it('should not trigger abortFn when under 300000ms', async () => {
@@ -18,6 +28,7 @@ describe('test', () => {
 
     await egeriaFetch('/', 'GET', {}, {}).then((response: any) => {
       expect(abortFn).toBeCalledTimes(0);
+      expect(throwError).toBeCalledTimes(0);
     });
   });
 
@@ -36,6 +47,7 @@ describe('test', () => {
       expect(diff).toBeGreaterThan(REQUEST_TIMEOUT);
 
       expect(abortFn).toBeCalledTimes(1);
+      expect(throwError).toBeCalledTimes(1);
     });
   });
 });
