@@ -5,11 +5,7 @@ import {
   handleResponse
 } from '../../auth';
 
-export const glossaries = {
-  getAll,
-  getGlossaryCategories,
-  getGlossaryTerms
-};
+import { egeriaFetch } from '../egeria-fetch';
 
 /**
  *
@@ -23,9 +19,7 @@ export const glossaries = {
  *
  */
 function getAll() {
-    const requestOptions: any = { method: 'GET', headers: authHeader() };
-
-    return fetch(`${API_URL}/api/glossaries`, requestOptions).then(handleResponse);
+  return egeriaFetch(`/api/glossaries`, 'GET', authHeader(), {});
 }
 
 /**
@@ -40,9 +34,7 @@ function getAll() {
  *
  */
 function getGlossaryCategories(glossaryGUID) {
-  const requestOptions: any = { method: 'GET', headers: authHeader() };
-
-  return fetch(`${API_URL}/api/glossaries/${glossaryGUID}/categories`, requestOptions).then(handleResponse);
+  return egeriaFetch(`/api/glossaries/${glossaryGUID}/categories`, 'GET', authHeader(), {});
 }
 
 /**
@@ -57,7 +49,11 @@ function getGlossaryCategories(glossaryGUID) {
  *
  */
  function getGlossaryTerms(categoryGUID) {
-  const requestOptions: any = { method: 'GET', headers: authHeader() };
-
-  return fetch(`${API_URL}/api/glossaries/categories/${categoryGUID}/terms`, requestOptions).then(handleResponse);
+  return egeriaFetch(`/api/glossaries/categories/${categoryGUID}/terms`, 'GET', authHeader(), {});
 }
+
+export const glossaries = {
+  getAll,
+  getGlossaryCategories,
+  getGlossaryTerms
+};
