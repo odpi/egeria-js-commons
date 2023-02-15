@@ -58,6 +58,7 @@ import {
   PAGE_SIZE_INCREASE_VALUE,
   QUERY_MIN_LENGTH,
   TYPES_MIN_SELECTED,
+  VISIBLE_COMPONENTS,
   getAssetLineagePrintPath
 } from './commons';
 
@@ -109,6 +110,7 @@ export {
   ASSET_CATALOG_PATH,
   LOGIN_PATH,
   LINEAGE_TYPES,
+  VISIBLE_COMPONENTS,
   getAssetLineagePrintPath,
 
   PAGE_SIZE_INCREASE_VALUE,
