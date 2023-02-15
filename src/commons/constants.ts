@@ -26,7 +26,6 @@ enum VISIBLE_COMPONENTS {
   VERTICAL_LINEAGE = 'vertical-lineage'
 }
 
-
 export {
   API_URL,
   LINEAGE_TYPES,
