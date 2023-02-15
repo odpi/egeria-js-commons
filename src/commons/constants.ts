@@ -14,11 +14,25 @@ enum LINEAGE_TYPES {
   ULTIMATE_DESTINATION = 'ultimate-destination'
 }
 
+enum VISIBLE_COMPONENTS {
+  ASSET_CATALOG = 'asset-catalog',
+  GLOSSARY = 'glossary',
+  REPOSITORY_EXPLORER = 'repository-explorer',
+  TYPE_EXPLORER = 'type-explorer',
+  ASSET_LINEAGE = 'asset-lineage',
+  END_TO_END = 'end-to-end',
+  ULTIMATE_SOURCE = 'ultimate-source',
+  ULTIMATE_DESTINATION = 'ultimate-destination',
+  VERTICAL_LINEAGE = 'vertical-lineage'
+}
+
+
 export {
   API_URL,
   LINEAGE_TYPES,
   PAGE_SIZE_INCREASE_VALUE,
   QUERY_MIN_LENGTH,
   REQUEST_TIMEOUT,
-  TYPES_MIN_SELECTED
+  TYPES_MIN_SELECTED,
+  VISIBLE_COMPONENTS
 }
