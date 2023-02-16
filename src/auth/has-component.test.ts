@@ -1,4 +1,4 @@
-import { describe, expect, jest, test, it} from '@jest/globals';
+import { describe, expect, jest, it} from '@jest/globals';
 import { getSub } from './get-sub';
 import { hasComponent } from './has-component';
 
