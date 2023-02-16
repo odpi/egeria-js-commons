@@ -4,8 +4,8 @@ export const hasComponent = (component: string) => {
   const sub = getSub();
 
   if (sub !== null && (
-      JSON.parse(sub).visibleComponents.includes(component) ||
-      JSON.parse(sub).visibleComponents.includes('*'))) {
+      JSON.parse(sub).visibleComponents.includes('*') ||
+      JSON.parse(sub).visibleComponents.includes(component))) {
         return true;
   }
 
