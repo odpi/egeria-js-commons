@@ -15,12 +15,16 @@ enum LINEAGE_TYPES {
 }
 
 enum VISIBLE_COMPONENTS {
+  ABOUT = 'about',
   ASSET_CATALOG = 'asset-catalog',
+  ASSET_DETAILS = 'asset-details',
+  ASSETS_DETAILS_PRINT = 'asset-details-print',
+  ASSET_LINEAGE = 'asset-lineage',
+  ASSET_LINEAGE_PRINT = 'asset-lineage-print',
+  END_TO_END = 'end-to-end',
   GLOSSARY = 'glossary',
   REPOSITORY_EXPLORER = 'repository-explorer',
   TYPE_EXPLORER = 'type-explorer',
-  ASSET_LINEAGE = 'asset-lineage',
-  END_TO_END = 'end-to-end',
   ULTIMATE_SOURCE = 'ultimate-source',
   ULTIMATE_DESTINATION = 'ultimate-destination',
   VERTICAL_LINEAGE = 'vertical-lineage'
