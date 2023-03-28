@@ -4,7 +4,7 @@ export function authHeader() {
   const _currentJwt = currentJwt();
 
   if (_currentJwt) {
-    return { "x-auth-token": _currentJwt };
+    return { "Authorization": `Bearer ${_currentJwt}` };
   } else {
     return {};
   }
@@ -15,9 +15,9 @@ export function authHeaderWithContentType() {
 
   if (_currentJwt) {
     return {
-      "x-auth-token": _currentJwt,
-      "Content-Type": "application/json",
-      "accept" : "application/json"
+      "Content-type": "application/json",
+      "accept" : "application/json",
+      "Authorization": `Bearer ${_currentJwt}`
     };
   } else {
     return {};

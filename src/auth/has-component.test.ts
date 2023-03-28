@@ -1,9 +1,19 @@
 import { describe, expect, jest, it} from '@jest/globals';
+import { currentJwt } from './current-jwt';
 import { getSub } from './get-sub';
 import { hasComponent } from './has-component';
+import { parseJwt } from './parse-jwt';
 
 jest.mock('./get-sub', () => ({
   getSub: jest.fn()
+}));
+
+jest.mock('./current-jwt', () => ({
+  currentJwt: jest.fn()
+}));
+
+jest.mock('./parse-jwt', () => ({
+  parseJwt: jest.fn()
 }));
 
 describe('hasComponent', () => {
@@ -11,7 +21,9 @@ describe('hasComponent', () => {
     const visibleComponents = ['Component1', 'Component2'];
     const sub = { visibleComponents };
 
-    (getSub as jest.Mock).mockReturnValue(JSON.stringify(sub));
+    (currentJwt as jest.Mock).mockReturnValue(sub);
+    (parseJwt as jest.Mock).mockReturnValue(sub);
+
 
     expect(hasComponent('Component1')).toBe(true);
   });
@@ -20,7 +32,8 @@ describe('hasComponent', () => {
     const visibleComponents = ['*'];
     const sub = { visibleComponents };
 
-    (getSub as jest.Mock).mockReturnValue(JSON.stringify(sub));
+    (currentJwt as jest.Mock).mockReturnValue(sub);
+    (parseJwt as jest.Mock).mockReturnValue(sub);
 
     expect(hasComponent('Component1')).toBe(true);
   });
@@ -29,7 +42,8 @@ describe('hasComponent', () => {
     const visibleComponents = ['Component1', '*'];
     const sub = { visibleComponents };
 
-    (getSub as jest.Mock).mockReturnValue(JSON.stringify(sub));
+    (currentJwt as jest.Mock).mockReturnValue(sub);
+    (parseJwt as jest.Mock).mockReturnValue(sub);
 
     expect(hasComponent('Component3')).toBe(true);
   });
@@ -38,7 +52,8 @@ describe('hasComponent', () => {
     const visibleComponents = ['Component1', 'Component2'];
     const sub = { visibleComponents };
 
-    (getSub as jest.Mock).mockReturnValue(JSON.stringify(sub));
+    (currentJwt as jest.Mock).mockReturnValue(sub);
+    (parseJwt as jest.Mock).mockReturnValue(sub);
 
     expect(hasComponent('Component3')).toBe(false);
   });
@@ -47,7 +62,8 @@ describe('hasComponent', () => {
     const visibleComponents = [];
     const sub = { visibleComponents };
 
-    (getSub as jest.Mock).mockReturnValue(JSON.stringify(sub));
+    (currentJwt as jest.Mock).mockReturnValue(sub);
+    (parseJwt as jest.Mock).mockReturnValue(sub);
 
     expect(hasComponent('Component3')).toBe(false);
   });

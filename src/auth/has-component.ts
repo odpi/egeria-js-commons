@@ -1,13 +1,17 @@
-import { getSub } from "./get-sub";
+import { currentJwt } from './current-jwt';
+import { parseJwt } from './parse-jwt';
 
 export const hasComponent = (component: string) => {
-  const sub = getSub();
 
-  if (sub !== null && (
-      JSON.parse(sub).visibleComponents.includes('*') ||
-      JSON.parse(sub).visibleComponents.includes(component))) {
-        return true;
+  const token = currentJwt();
+  if(token !== undefined && token !== null){
+    const visibleComponents = parseJwt(token).visibleComponents;
+
+    return visibleComponents !== null && (
+        visibleComponents.includes('*') ||
+        visibleComponents.includes(component));
+    
   }
-
+  
   return false;
 }
