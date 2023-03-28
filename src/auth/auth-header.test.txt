@@ -7,7 +7,7 @@ describe("authHeader()", () => {
   it("should retrieve a token", () => {
     Storage.prototype.getItem = jest.fn(() => 'test');
 
-    expect(JSON.stringify(authHeader())).toBe(JSON.stringify({ "x-auth-token": "test" }));
+    expect(JSON.stringify(authHeader())).toBe(JSON.stringify({ "Authorization": "Bearer test" }));
   });
 
   it("should not retrieve a token", () => {
@@ -20,7 +20,7 @@ describe("authHeader()", () => {
   it ("should retrieve with content type", () => {
     Storage.prototype.getItem = jest.fn(() => 'test');
 
-    expect(JSON.stringify(authHeaderWithContentType())).toBe(JSON.stringify({ "x-auth-token": "test", "Content-Type": "application/json",
+    expect(JSON.stringify(authHeaderWithContentType())).toBe(JSON.stringify({ "Authorization": "Bearer test", "Content-Type": "application/json",
       "accept" : "application/json" }));
   });
 });
