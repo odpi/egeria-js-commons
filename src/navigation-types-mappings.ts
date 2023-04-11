@@ -12,4 +12,6 @@ export const lineageViewsTypesMapping: any = {
     'RelationalTable' : ['ultimate-source', 'ultimate-destination','end-to-end'],
     'DataFile' : ['ultimate-source', 'ultimate-destination','end-to-end'],
     'CSVFile' : ['ultimate-source', 'ultimate-destination','end-to-end'],
+    'RelationalColumn' : ['ultimate-source', 'ultimate-destination','end-to-end'],
+    'TabularFileColumn' : ['ultimate-source', 'ultimate-destination','end-to-end']
 }
