@@ -1,9 +1,5 @@
 import { API_URL } from '../../commons/constants';
-
-import {
-  authHeader,
-  handleResponse
-} from '../../auth';
+import { authHeader, handleResponse } from '../../http';
 
 export const types = {
   getAll

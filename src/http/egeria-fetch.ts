@@ -1,8 +1,4 @@
-import {
-  handleResponse,
-  authHeader
-} from '../auth';
-
+import { handleResponse, authHeader } from '../http';
 import { API_URL, REQUEST_TIMEOUT } from '../commons/constants';
 
 const egeriaFetch = (uri: string, method : string, headers : any, options: any) => {

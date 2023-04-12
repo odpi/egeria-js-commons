@@ -1,6 +1,5 @@
 import { API_ASSETS_TYPES_PATH } from '../../routes';
-
-import { fetchData } from '../../egeria-fetch';
+import { fetchData } from '../../../http';
 
 /**
  * @param apiUrl is an optional parameter but it is used if API is deployed

@@ -1,9 +1,8 @@
 import { API_LOGIN_PATH } from '../api/routes';
 import { API_URL } from '../commons/constants';
-import { setToken } from './set-token';
+import { token } from '../token';
 
-
-export function login(username: string, password: string) {
+export const login = (username: string, password: string) => {
   const requestOptions = {
     method: 'POST',
     body: new URLSearchParams(`username=${username}&password=${password}`)
@@ -17,7 +16,8 @@ export function login(username: string, password: string) {
       return response.text();
     })
     .then((data) => {
-        setToken(data);
+      token.setValue(data);
     })
-    .then( () => {return res;});
-}
+    .then(() => res);
+};
+

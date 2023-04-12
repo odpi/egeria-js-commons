@@ -1,8 +1,4 @@
-import {
-  authHeader,
-  handleResponse
-} from '../../auth';
-
+import { authHeader, handleResponse } from '../../http';
 import { API_URL } from '../../commons/constants';
 
 function getLineageTypes() {

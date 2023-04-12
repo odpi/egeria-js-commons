@@ -1,4 +1,4 @@
-import { logout } from './logout';
+import { logout } from '../authentication';
 
 export function handleResponse(response: any) {
   if (!response.ok) {
