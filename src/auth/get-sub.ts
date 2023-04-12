@@ -4,7 +4,7 @@ import { parseJwt } from './parse-jwt';
 export const getSub = () => {
   const token = currentJwt();
 
-  if (token !== undefined && token !== null) {
+  if (token !== undefined && token !== null && parseJwt(token).sub) {
     return JSON.parse(parseJwt(token).sub);
   }
 
