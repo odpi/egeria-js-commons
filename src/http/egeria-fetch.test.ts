@@ -22,7 +22,7 @@ global.document = {
 };
 
 describe('test', () => {
-  it('should not trigger abortFn when under 300000ms', async () => {
+  it(`should not trigger abortFn when under ${REQUEST_TIMEOUT}ms`, async () => {
     // @ts-ignore
     global.fetch = jest.fn(() => new Promise(resolve => resolve({ok:200})));
 
@@ -32,7 +32,7 @@ describe('test', () => {
     });
   });
 
-  it('should trigger abortFn when above 30000ms', async () => {
+  it(`should trigger abortFn when above ${REQUEST_TIMEOUT}ms`, async () => {
     // @ts-ignore
     global.fetch = jest.fn(() => new Promise(resolve => setTimeout(() => resolve({ok:200}), REQUEST_TIMEOUT + 1000)));
 

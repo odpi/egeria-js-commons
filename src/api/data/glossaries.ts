@@ -1,11 +1,4 @@
-import { API_URL } from '../../commons/constants';
-
-import {
-  authHeader,
-  handleResponse
-} from '../../auth';
-
-import { egeriaFetch } from '../egeria-fetch';
+import { authHeader, egeriaFetch } from '../../http';
 
 /**
  *

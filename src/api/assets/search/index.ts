@@ -1,7 +1,7 @@
 import { API_ASSETS_SEARCH_PATH } from '../../routes';
-import { QUERY_MIN_LENGTH, TYPES_MIN_SELECTED, API_URL } from '../../../commons/constants';
+import { QUERY_MIN_LENGTH, TYPES_MIN_SELECTED } from '../../../commons/constants';
 import { formData } from '../../../types/formData';
-import { fetchData } from '../../egeria-fetch';
+import { fetchData } from '../../../http';
 import { getQueryParamsPath } from '../../../forms/index';
 
 /**
