@@ -76,6 +76,7 @@ import {
 
 import { formData } from './types/formData';
 import { JWTInterface } from './token';
+import { eNavigateTo } from './events';
 
 import {
   formIsValid,
@@ -96,6 +97,7 @@ export {
   authHeaderWithContentType,
   capitalize,
   egeriaFetch,
+  eNavigateTo,
   fetchData,
   getComponent,
   getFormattedDate,

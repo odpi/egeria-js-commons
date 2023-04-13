@@ -1,3 +1,5 @@
+import { eNavigateTo } from '../events';
+import { LOGIN_PATH } from '../commons';
 import { token } from '../token';
 
 export const logout = (logoutCallback?: Function) => {
@@ -7,6 +9,8 @@ export const logout = (logoutCallback?: Function) => {
 
   if (logoutCallback) {
     logoutCallback();
+  } else {
+    eNavigateTo(LOGIN_PATH);
   }
 
   console.log('LOGGED OUT.');
