@@ -1,7 +1,8 @@
 export const eNavigateTo = (path: string): void => {
-  const event = new CustomEvent('EGERIA_NAVIGATE_TO', {
+  const event = new CustomEvent('EGERIA_EVENTS', {
     'detail': {
-      path: path
+      path: path,
+      type: 'EGERIA_NAVIGATE_TO'
     }
   });
 
