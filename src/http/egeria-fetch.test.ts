@@ -22,6 +22,10 @@ global.document = {
 };
 
 describe('test', () => {
+  it('comment the rest and use this to not wait for the async test', () => {
+    expect(true).toBe(true);
+  });
+
   it(`should not trigger abortFn when under ${REQUEST_TIMEOUT}ms`, async () => {
     // @ts-ignore
     global.fetch = jest.fn(() => new Promise(resolve => resolve({ok:200})));
