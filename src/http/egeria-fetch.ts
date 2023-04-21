@@ -1,5 +1,6 @@
 import { handleResponse, authHeader } from '../http';
 import { API_URL, REQUEST_TIMEOUT } from '../commons/constants';
+import { eNavigateTo } from '../events';
 
 const egeriaFetch = (uri: string, method : string, headers : any, options: any) => {
   const controller = new AbortController();
@@ -23,7 +24,24 @@ const egeriaFetch = (uri: string, method : string, headers : any, options: any) 
 
     return handleResponse(response);
   }).catch((error: any) => {
-    console.error(`Error:`, error);
+    clearTimeout(timeoutId);
+
+    switch(error.toString()) {
+      case 'TypeError: Failed to fetch':
+        eNavigateTo('/server-unavailable');
+
+        const event = new CustomEvent('EGERIA_API_ERROR', {
+          'detail': {
+            status: 500,
+            statusText: `The server is unavailable at the moment.`
+          }
+        });
+
+        document.dispatchEvent(event);
+        break;
+      default:
+        console.error(`Error:`, error);
+    }
   });
 }
 
