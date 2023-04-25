@@ -5,8 +5,7 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "warn"
   },
   "extends": [
     "eslint:recommended",
