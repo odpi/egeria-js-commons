@@ -23,6 +23,9 @@ jobs:
       - name: Install dependencies
         if: steps.check.outputs.changed == 'true'
         run: npm install
+      - name: Lint
+        if: steps.check.outputs.changed == 'true'
+        run: npm run lint
       - name: Run tests
         if: steps.check.outputs.changed == 'true'
         run: npm run test

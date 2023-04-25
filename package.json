@@ -16,8 +16,6 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext .ts",
-    "prebuild": "npm run test",
-    "pretest": "npm run lint",
     "test": "jest"
   },
   "keywords": [
