@@ -27,7 +27,7 @@ const egeriaFetch = (uri: string, method : string, headers : any, options: any) 
     clearTimeout(timeoutId);
 
     switch(error.toString()) {
-      case 'TypeError: Failed to fetch':
+      case 'TypeError: Failed to fetch': {
         eNavigateTo('/server-unavailable');
 
         const event = new CustomEvent('EGERIA_API_ERROR', {
@@ -39,8 +39,10 @@ const egeriaFetch = (uri: string, method : string, headers : any, options: any) 
 
         document.dispatchEvent(event);
         break;
-      default:
+      }
+      default: {
         console.error(`Error:`, error);
+      }
     }
   });
 }
@@ -53,7 +55,7 @@ const egeriaFetch = (uri: string, method : string, headers : any, options: any) 
  *                 in a custom manner
  * @returns
  */
-const fetchData = async (uri: string, method: string, callback?: Function) => {
+const fetchData = async (uri: string, method: string, callback?: any) => {
   const res = await egeriaFetch(uri, method, {...authHeader()}, {});
   const data = await res ? res.json() : null;
 

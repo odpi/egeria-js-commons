@@ -14,7 +14,7 @@ const formIsValid = (form: formData) => {
 };
 
 const getQueryParamsPath = (form: formData) => {
-  return Object.keys(form).map((key: any, index: number) => {
+  return Object.keys(form).map((key: any) => {
     switch(key) {
       case 'q':
         return `${key}=${form.q?.value}`;

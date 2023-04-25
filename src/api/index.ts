@@ -18,7 +18,7 @@ function goHome() {
   console.log('WENT HOME');
 
   window.location.href = '/';
-};
+}
 
 export {
   API_ASSETS_SEARCH_PATH,
