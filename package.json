@@ -30,7 +30,7 @@
   "homepage": "https://github.com/odpi/egeria-js-commons#readme",
   "devDependencies": {
     "@babel/preset-typescript": "^7.18.6",
-    "@types/node": "^18.11.4",
+    "@types/node": "^20.1.4",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
     "eslint": "^8.39.0",
