@@ -6,7 +6,7 @@
 interface formData {
   caseSensitive?: boolean,
   exactMatch?: boolean,
-  pageSize?: number,
+  pageSize: number,
   q?: {
       value: string,
       isValid: boolean,
