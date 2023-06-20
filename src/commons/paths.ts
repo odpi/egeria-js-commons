@@ -5,8 +5,8 @@ const ASSET_CATALOG_PATH = '/assets/catalog';
 const LOGIN_PATH = '/login';
 const ABOUT_PATH = '/about';
 
-const getAssetLineagePrintPath = (guid: any, lineageType: any) => {
-  return `/asset-lineage/${ guid }/${ lineageType }/print`;
+const getAssetLineagePrintPath = (guid: any, lineageType: any, includeProcess: any) => {
+  return `/asset-lineage/${ guid }/${ lineageType }/print?includeProcesses=${ includeProcess }`;
 };
 
 export {
